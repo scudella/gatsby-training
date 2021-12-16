@@ -1,0 +1,64 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../components/Complete'
+
+<section className="mdx-page">
+
+## my first mdx file
+
+**Cloud bread banh mi before they sold out fashion axe, activated charcoal neutra YOLO poutine.** Tousled PBR&B four loko, poke tumeric leggings chia tote bag tbh copper mug la croix. Everyday carry neutra chicharrones man bun. Hashtag mixtape prism vaporware tumblr, waistcoat actually migas vegan mumblecore church-key tofu neutra sartorial gochujang. _Unicorn fixie craft beer tilde, chambray normcore vice hell of iPhone._
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastName = 'smith'
+```
+
+</div>
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
+
+<div className="nice-text">
+
+<h3>nice text</h3>
+
+<FiInfo className="nice-text-icon" />
+
+Bushwick ramps distillery affogato chicharrones organic XOXO kinfolk occupy etsy jean shorts. +1 af pabst gentrify heirloom. Kickstarter quinoa plaid raclette master cleanse. Vegan wayfarers helvetica retro cray. Scenester art party organic, flannel sustainable thundercats migas distillery single-origin coffee vexillologist echo park tilde hammock food truck austin. Iceland gentrify green juice retro umami banjo vape.
+
+</div>
+
+<h2>React Components</h2>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+</section>
