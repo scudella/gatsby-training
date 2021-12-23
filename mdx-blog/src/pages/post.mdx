@@ -1,6 +1,6 @@
 import { Link } from 'gatsby'
 import { FiInfo } from 'react-icons/fi'
-import { Counter, LikeButton } from '../components/Complete'
+import { Counter, LikeButton, RegVideo, Video } from '../components/Complete'
 
 <section className="mdx-page">
 
@@ -56,6 +56,104 @@ const LikeButton = () => {
 ```
 
 <LikeButton />
+
+<h2>video components</h2>
+<RegVideo />
+<Video />
+<h2>regular heading</h2>
+<h2 title>title heading</h2>
+<h4>inline code</h4>
+
+`console.log('hello there')`
+
+<h4>blockquote element</h4>
+
+<blockquote display="default">
+  Bushwick ramps distillery affogato chicharrones organic XOXO kinfolk occupy
+  etsy jean shorts. Scenester art party organic, flannel sustainable thundercats
+  migas distillery single-origin coffee vexillologist echo park tilde hammock
+  food truck austin.
+</blockquote>
+
+<blockquote display="info">
+  Bushwick ramps distillery affogato chicharrones organic XOXO kinfolk occupy
+  etsy jean shorts. Scenester art party organic, flannel sustainable thundercats
+  migas distillery single-origin coffee vexillologist echo park tilde hammock
+  food truck austin.
+</blockquote>
+
+<blockquote display="warning">
+  Bushwick ramps distillery affogato chicharrones organic XOXO kinfolk occupy
+  etsy jean shorts. Scenester art party organic, flannel sustainable thundercats
+  migas distillery single-origin coffee vexillologist echo park tilde hammock
+  food truck austin.
+</blockquote>
+
+<blockquote>
+  Bushwick ramps distillery affogato chicharrones organic XOXO kinfolk occupy
+  etsy jean shorts. +1 af pabst gentrify heirloom. Kickstarter quinoa plaid
+  raclette master cleanse. Vegan wayfarers helvetica retro cray. Scenester art
+  party organic, flannel sustainable thundercats migas distillery single-origin
+  coffee vexillologist echo park tilde hammock food truck austin. Iceland
+  gentrify green juice retro umami banjo vape.
+</blockquote>
+
+#### Javascript
+
+```js
+// comments
+const name = 'john'
+const channel = 'coding addict'
+
+function featuredProducts(data) {
+  return data.filter(item => {
+    return item.featured === true
+  })
+}
+featuredProducts()
+```
+
+#### JSX
+
+```jsx
+import React from 'react'
+
+const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <section className="counter">
+      <h4>show some love to MDX</h4>
+      <h4>likes {count}</h4>
+      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+        i like mdx
+      </button>
+    </section>
+  )
+}
+export default Counter
+```
+
+#### HTML
+
+```html
+<h1>hello world</h1>
+<p class="random">random text</p>
+<section class="contact">
+  <div class="title">
+    <h1>contact us</h1>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css
+max-width: 500px;
+border-radius: var(--radius);
+padding: 1rem 1.5rem;
+background: var(--clr-grey-10);
+text-align: center;
+```
 
 <Link to="/posts" className="btn center-btn">
   all posts
