@@ -3,15 +3,20 @@ import Hero from '../components/Hero'
 import Layout from '../components/Layout'
 import Posts from '../components/Posts'
 import { graphql } from 'gatsby'
+import Seo from '../components/Seo'
+
 const IndexPage = ({ data }) => {
   const {
     allMdx: { nodes: posts },
   } = data
   return (
-    <Layout>
-      <Hero showPerson />
-      <Posts posts={posts} title="recently published" />
-    </Layout>
+    <>
+      <Seo title="Home" />
+      <Layout>
+        <Hero showPerson />
+        <Posts posts={posts} title="recently published" />
+      </Layout>
+    </>
   )
 }
 

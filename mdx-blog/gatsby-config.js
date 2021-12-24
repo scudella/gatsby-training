@@ -6,6 +6,16 @@
 
 module.exports = {
   /* Your site config here */
+
+  siteMetadata: {
+    title: `WebDev MDX Blog`,
+    description: `Awesome WebDev MDX Blog built with Gatsby`,
+    titleTemplate: `%s | WebDev MDX Blog`,
+    url: `https://scud-gatsby-mdx-blog.netlify.app`,
+    twitterUsername: `@scudella`,
+    image: '/mainImg.png',
+  },
+
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -27,6 +37,7 @@ module.exports = {
         path: `${__dirname}/src/posts`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
