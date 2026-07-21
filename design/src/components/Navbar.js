@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import logo from '../images/logo.svg'
-import { GoThreeBars } from 'react-icons/go'
+import { HiBars3 } from 'react-icons/hi2'
 import { Link } from 'gatsby'
 import NavLink from './NavLink'
 import { GatsbyContext } from '../context/context'
@@ -23,7 +23,7 @@ const Navbar = () => {
           </Link>
           {!isSidebarOpen && (
             <button className="toggle-btn" onClick={showSidebar}>
-              <GoThreeBars />
+              <HiBars3 />
             </button>
           )}
         </div>

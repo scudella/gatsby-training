@@ -24,7 +24,7 @@ export const query = graphql`
   {
     allAirtable(
       filter: { table: { eq: "Projects" } }
-      sort: { fields: data___date, order: DESC }
+      sort: { data: { date: DESC } }
     ) {
       nodes {
         id
@@ -35,7 +35,7 @@ export const query = graphql`
           image {
             localFiles {
               childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
+                gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
               }
             }
           }
