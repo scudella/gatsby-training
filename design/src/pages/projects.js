@@ -9,7 +9,6 @@ const ProjectsPage = ({ data }) => {
   } = data
   return (
     <>
-      <Seo title="Projects" />
       <Wrapper>
         <Layout>
           <Projects title="our projects" projects={projects} page />
@@ -19,6 +18,10 @@ const ProjectsPage = ({ data }) => {
     </>
   )
 }
+
+export const Head = ({ location }) => (
+  <Seo title="Projects" location={location} />
+)
 
 export const query = graphql`
   {

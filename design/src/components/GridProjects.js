@@ -9,7 +9,6 @@ const GridProjects = ({ projects, title }) => {
       <Title title={title || 'projects'} />
       <div className="tile-layout">
         {projects.map((project, index) => {
-          console.log(project)
           const { id } = project
           const { name, type } = project.data
           const image = project.data.image.localFiles[0]

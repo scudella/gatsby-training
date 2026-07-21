@@ -17,7 +17,6 @@ const HomePage = ({ data }) => {
   } = data
   return (
     <>
-      <Seo title="Home" />
       <Layout>
         <Hero />
         <About />
@@ -28,6 +27,8 @@ const HomePage = ({ data }) => {
     </>
   )
 }
+
+export const Head = ({ location }) => <Seo title="Home" location={location} />
 
 export const query = graphql`
   {
